@@ -1,10 +1,21 @@
 # Project 4: Image or Text Recognition (Basic)
 # DecodeLabs - Industrial Training Kit
 # Goal: Image ke andar likhi hui text ko machine se pehchanwana (OCR)
+#
+# SETUP NOTE: Is script ko chalane se pehle:
+# 1. pip install pytesseract pillow opencv-python
+# 2. Tesseract OCR Engine install karo: https://github.com/UB-Mannheim/tesseract/wiki
+# 3. Neeche wala path apni installation location ke mutabiq set karo
 
 import pytesseract
 from PIL import Image
 import cv2
+
+# ---------------------------------------------------------
+# WINDOWS USERS: Agar "TesseractNotFoundError" aaye to
+# neeche wali line ka # hata do aur apna sahi path daalo
+# ---------------------------------------------------------
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # ---------------------------------------------------------
 # STEP 1: INPUT - Image load karo
